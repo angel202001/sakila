@@ -4,4 +4,4 @@ use sakila;
 
 show tables;
 
-select * from actor_info;
+select * from rental;
