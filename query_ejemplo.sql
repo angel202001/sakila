@@ -2,4 +2,6 @@ show databases;
 
 use sakila;
 
-select * from actor;
+show tables;
+
+select * from actor_info;
