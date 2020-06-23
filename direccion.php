@@ -1,7 +1,7 @@
 <?php
 
 
-$nombrePagina = "direccion";
+$nombrePagina = "dirección";
 
 
 

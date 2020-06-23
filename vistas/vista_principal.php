@@ -1,45 +1,41 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title><?php echo $nombrePagina; ?></title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-</head>
+<?php include_once "partes/parte_head.php" ;?>
+
+
 <body>
 
-<h1>Bienvenidos a la pagina <?php echo $nombrePagina; ?></h1>
+<!-- Barra superior -->
 
-<ul class="nav nav-pills">
-    <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="actor.php">Actor</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="direccion.php">Direccion</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="ciudad.php">Ciudad</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="pais.php">Pais</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="cliente.php">Cliente</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="pelicula.php">Pelicula</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="idioma.php">Idioma</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="personal.php">Personal</a>
-    </li>
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+        Sakila
+    </a>
+</nav>
+
+<!-- Contenido -->
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-md-2">
+            <?php include_once "partes/parte_menu.php";?>
+
+        </div>
+
+        <div class="col-md-10">
+            <h3><?php echo $nombrePagina;?></h3>
+
+        </div>
 
 
-</ul>
+    </div>
+
+
+</div>
+
+
+
 
 </body>
 </html>
