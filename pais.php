@@ -1,7 +1,8 @@
 <?php
 
+require_once "funciones/ayudante.php";
 
-$nombrePagina = "pais";
+$nombrePagina = "País";
 
 
 
