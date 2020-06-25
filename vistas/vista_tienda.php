@@ -30,38 +30,36 @@
 
             <div class="row">
                 <div class="col-md-5">
-                    <form action="cliente.php" nethod="get">
+                    <form action="tienda.php" nethod="get">
 
                         <div class="mb-3">
-                            <label for="nombreCliente">Nombre</label>
-                            <input type="text" name="nombreCliente" id="nombreCliente" class="form-control">
+                            <label for="nombreTienda">Gerente de la tienda</label>
+                            <select name="nombreTienda" id="nombreTienda" class="form-select">
+                                <option value="">Aqui va el gerente , desde SQL</option>
+
+                            </select>
+
 
                         </div>
 
 
                         <div class="mb-3">
-                            <label for="apellicoCliente">Apellido</label>
-                            <input type="text" name="apellidoCliente" id="apellidoCliente" class="form-control">
+                            <label for="direccionTienda">Direccion de la tienda</label>
+                            <select name="direccionTienda" id="direccionTienda" class="form-select">
+                                <option value="">Aqui va el direccion , desde SQL</option>
+
+                            </select>
+
 
                         </div>
 
-
-                        <div class="mb-3">
-                            <label for="nombreEmail">Escriba su correo</label>
-                            <input type="text" name="nombreEmail" id="nombreEmail" class="form-control"
-                                   placeholder="Email">
-
-                        </div>
-
-
                         <div class="mb-3">
 
-                            <button type="submit" name="guardarCliente" class="btn btn-primary">Guardar datos</button>
+                            <button type="submit" name="guardarTienda" class="btn btn-primary">Guardar datos</button>
 
                         </div>
 
                     </form>
-
 
                 </div>
 

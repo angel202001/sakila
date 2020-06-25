@@ -2,11 +2,11 @@
 
 require_once "funciones/ayudante.php";
 
-$nombrePagina = "País";
+$nombrePagina = "Tienda";
 
 
 // Aseguremonos de que el usuario haya hecho click en el boton
-if (isset($_GET['paisNombre'])){
+if (isset($_GET['guardarTienda'])){
 
     echo "Se van ha guardar los datos....";
 }
@@ -14,4 +14,4 @@ if (isset($_GET['paisNombre'])){
 
 // Incluir la vista
 
-include_once "vistas/vista_pais.php";
+include_once "vistas/vista_tienda.php";
