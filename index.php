@@ -4,18 +4,15 @@ require_once  "funciones/ayudante.php";
 
 $nombrePagina = "Principal";
 
-imprimirArray($_GET);
-
-// Declaramos las variables
 
 
+// Incluir los modelos
 
-$nombre = $_GET['nombre']?? "";
-$apellido = $_GET['apellido']?? "";
-$ciudad = $_GET['ciudad']?? "";
-$correo= $_GET['correo']?? "";
-$contraseña = $_GET['password'] ?? "";
+require_once "modelos/modelo_actor.php";
 
+$actores = obtenerActores($conexion);
+
+imprimirArray($actores);
 
 // Aseguremonos de que el usuario haya hecho click en el boton
 if (isset($_GET['guardarPrincipal'])){

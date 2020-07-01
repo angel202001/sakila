@@ -54,7 +54,16 @@
                         <div class="mb-3">
                             <label for="ciudad">Ciudad</label>
                             <select name="ciudad" id="ciudad" class="form-select">
-                                <option value="">Aqui va el listado de la ciudad, desde SQL</option>
+                                <option value="">Elige una ciudad</option>
+
+                                <?php
+                                foreach ($ciudades as $ciudad) {
+
+                                    echo " <option value=\"{$ciudad["city_id"]}\">{$ciudad["city"]}</option>";
+
+                                }
+
+                                ?>
 
                             </select>
 

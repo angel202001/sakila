@@ -76,7 +76,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="especialesPelicula">Especiales de pelicula</label>
+                            <label for="especialesPelicula">Especiales de peliculas</label>
                             <input type="text" name="especialesPelicula" id="especialesPelicula" class="form-control">
 
                         </div>

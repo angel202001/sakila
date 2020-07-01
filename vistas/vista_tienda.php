@@ -46,7 +46,7 @@
                         <div class="mb-3">
                             <label for="direccionTienda">Direccion de la tienda</label>
                             <select name="direccionTienda" id="direccionTienda" class="form-select">
-                                <option value="">Aqui va el direccion , desde SQL</option>
+                                <option value="">Aqui va la direccion , desde SQL</option>
 
                             </select>
 

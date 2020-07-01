@@ -27,7 +27,7 @@
         <div class="col-md-7">
             <h3><?php echo $nombrePagina; ?></h3>
 
-            <hr>
+
 
             <div class="row">
                 <div class="col-md-5">

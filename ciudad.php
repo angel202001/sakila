@@ -1,6 +1,7 @@
 <?php
 
 require_once "funciones/ayudante.php";
+require_once  "config/conexion.php";
 
 $nombrePagina = "Ciudad";
 

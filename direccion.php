@@ -1,8 +1,17 @@
 <?php
 
 require_once "funciones/ayudante.php";
+require_once  "config/conexion.php";
 
-imprimirArray($_GET);
+// Incluir los modelos
+
+require_once "modelos/modelo_ciudad.php";
+
+$ciudades = obtenerCiudades($conexion);
+
+// imprimirArray($ciudades);
+
+
 
 $nombrePagina = "Dirección";
 

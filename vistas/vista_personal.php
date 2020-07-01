@@ -1,6 +1,7 @@
 <?php include_once "partes/parte_head.php"; ?>
 
 
+
 <body>
 
 <!-- Barra superior -->
@@ -54,6 +55,38 @@
                             </select>
 
                         </div>
+
+
+                        <div class="mb-3">
+                            <label for="pinturaPersonal">Pintura</label>
+                            <input type="text" name="pinturaPersonal" id="pinturaPersonal" class="form-control">
+
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="correoPersonal">Escriba su correo</label>
+                            <input type="text" name="correoPersonal" id="pinturaPersonal" class="form-control" placeholder="Email">
+
+                        </div>
+
+
+
+                        <div class="mb-3">
+                            <label for="tiendaPersonal">Tiendas</label>
+                            <select name="tiendaPersonal" id="tiendaPersonal" class="form-select">
+                                <option value="">Aqui va el listado de la tienda, desde SQL</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="usuarioPersonal">Escriba su usuario</label>
+                            <input type="text" name="usuarioPersonal" id="usuarioPersonal" class="form-control">
+
+                        </div>
+
 
                         <div class="mb-3">
 
