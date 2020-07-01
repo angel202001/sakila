@@ -9,7 +9,7 @@ require_once "modelos/modelo_ciudad.php";
 
 $ciudades = obtenerCiudades($conexion);
 
-// imprimirArray($ciudades);
+imprimirArray($ciudades);
 
 
 
