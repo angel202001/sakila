@@ -35,15 +35,35 @@
                         <div class="mb-3">
                             <label for="numeroCity"> Ciudad</label>
                             <select name="numeroCity" id="numeroCity" class="form-select">
-                                <option value="">Escriba la ciudadL</option>
+                                <option value="">seleccione  la ciudad</option>
+
+                                <?php
+                                foreach ($ciudades as $ciudad) {
+
+                                    echo " <option value=\"{$ciudad["city_id"]}\">{$ciudad["city"]}</option>";
+
+                                }
+
+                                ?>
+
                             </select>
                         </div>
 
 
                         <div class="mb-3">
-                            <label for="selectorCiudad">Selecciona tu País</label>
+                            <label for="selectorCiudad"> País</label>
                             <select name="selectorCiudad" id="selectorCiudad" class="form-select">
-                                <option value="">Aqui va el id de pais , desde SQL</option>
+                                <option value="">seleccione un pais</option>
+
+                                <?php
+                                foreach ($paises as $pais) {
+
+                                    echo " <option value=\"{$pais["country_id"]}\">{$pais["country"]}</option>";
+
+                                }
+
+                                ?>
+
                             </select>
                         </div>
 

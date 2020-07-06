@@ -4,7 +4,7 @@ require_once  "config/conexion.php";
 
 function obtenerPaises($conexion){
 
-    $sql = "SELECT * FROM country";
+    $sql = "SELECT country_id, country FROM country";
 
     return $conexion->query($sql)->fetchAll();
 
