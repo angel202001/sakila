@@ -24,7 +24,7 @@
 
         </div>
 
-        <div class="col-md-7">
+        <div class="col-md-10">
             <h3><?php echo $nombrePagina; ?></h3>
 
 
@@ -32,28 +32,11 @@
             <div class="row">
                 <div class="col-md-5">
                     <form action="categoria.php" nethod="get">
-                        <div class="mb-3">
-                            <label for="categoria">Categoria</label>
-                            <select name="categoria" id="categoria" class="form-select">
-                                <option value="">Aqui va el listado de categoria</option>
-
-                            </select>
-
-                        </div>
 
 
                         <div class="mb-3">
-                            <label for="nombreCategoria">Nombre</label>
-                            <select name="nombreCategoria" id="nombreCategoria" class="form-select">
-                                <option value="">Aqui va el listado de nombre</option>
-
-                            </select>
-
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="actuaCategoria">Actualizaciones</label>
-                            <input type="text" name="actuaCategoria" id="actuaCategoria" class="form-control">
+                            <label for="categoriaNombre">Nombre</label>
+                            <input type="text" name="categoriaNombre" id="categoriaNombre" class="form-control" placeholder="Digite la categoria">
 
                         </div>
 
@@ -71,6 +54,50 @@
 
 
             </div>
+
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">
+
+
+                    <table class="table">
+                        <thead>
+
+                        <th scope="col">ID</th>
+                        <th scope="col">Categorias</th>
+
+
+                        </thead>
+
+                        <tbody>
+
+
+                        <?php
+
+                        foreach ($categorias as $categoria) {
+                            echo " <tr>
+
+                                <th scope=\"row\">{$categoria['category_id']}</th>
+                                <td>{$categoria['name']}</td>
+                                
+
+                            </tr>";
+
+                        }
+
+
+
+                        ?>
+
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
 
 
         </div>

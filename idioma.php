@@ -1,7 +1,7 @@
 <?php
 
 require_once "funciones/ayudante.php";
-require_once  "config/conexion.php";
+require_once "modelos/modelo_idioma.php";
 
 $nombrePagina = "Idioma";
 
@@ -11,6 +11,9 @@ if (isset($_GET['idioma'])){
     echo "Se van ha guardar los datos....";
 }
 
+$idiomas = obtenerIdiomas($conexion);
+
+//imprimirArray($idiomas);
 
 // Incluir la vista
 

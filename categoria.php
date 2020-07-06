@@ -1,7 +1,7 @@
 <?php
 
 require_once "funciones/ayudante.php";
-require_once  "config/conexion.php";
+require_once "modelos/modelo_categoria.php";
 
 $nombrePagina = "Categoria";
 
@@ -15,6 +15,10 @@ if (isset($_GET['categoria'])) {
     echo "Se van ha guardar los datos....";
 
 }
+
+$categorias = obtenerCategorias($conexion);
+//imprimirArray($categorias);
+
 
 // Incluir la vista
 

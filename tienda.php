@@ -1,9 +1,16 @@
 <?php
 
+
 require_once "funciones/ayudante.php";
-require_once  "config/conexion.php";
 
 $nombrePagina = "Tienda";
+
+
+// Incluir modelos
+
+require_once "modelos/modelo_tienda.php";
+$informacionTiendas = obtenerInformacionTienda($conexion);
+
 
 
 // Aseguremonos de que el usuario haya hecho click en el boton

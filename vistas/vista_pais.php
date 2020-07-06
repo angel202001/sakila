@@ -52,8 +52,52 @@
 
             </div>
 
+            <hr>
 
-        </div>
+            <div class="row">
+                <div class="col-md-12">
+
+
+                    <table class="table">
+                        <thead>
+
+                        <th scope="col">ID</th>
+                        <th scope="col">Ciudad</th>
+
+
+                        </thead>
+
+                        <tbody>
+
+
+                        <?php
+
+                        foreach ($paises as $pais) {
+                            echo " <tr>
+
+                                <th scope=\"row\">{$pais['country_id']}</th>
+                                <td>{$pais['country']}</td>
+                                
+
+                            </tr>";
+
+                        }
+
+
+
+                        ?>
+
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+
+            </div>
 
 
 </body>

@@ -35,7 +35,7 @@
                         <div class="mb-3">
                             <label for="numeroCity"> Ciudad</label>
                             <select name="numeroCity" id="numeroCity" class="form-select">
-                                <option value="">Aqui va el id de ciudad , desde SQL</option>
+                                <option value="">Escriba la ciudadL</option>
                             </select>
                         </div>
 
@@ -47,12 +47,6 @@
                             </select>
                         </div>
 
-
-                        <div class="mb-3">
-                            <label for="actualizacion">Ultima actulización</label>
-                            <input type="text" name="actualizacion" id="actualizacion" class="form-control">
-
-                        </div>
 
 
                         <div class="mb-3">
@@ -66,6 +60,51 @@
                 </div>
 
             </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">
+
+
+                    <table class="table">
+                        <thead>
+
+                        <th scope="col">ID de la ciudad</th>
+                        <th scope="col">Nombre de la ciudad</th>
+                        <th scope="col">Nombre del país</th>
+
+
+                        </thead>
+
+                        <tbody>
+
+
+                        <?php
+
+                        foreach ($ciudades as $ciudad) {
+                            echo " <tr>
+
+                                <th scope=\"row\">{$ciudad['city_id']}</th>
+                                <td>{$ciudad['city']}</td>
+                                <td>{$ciudad['country']}</td>
+                                
+
+                            </tr>";
+
+                        }
+
+
+
+                        ?>
+
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
 
 
         </div>

@@ -1,7 +1,8 @@
 <?php
 
 require_once "funciones/ayudante.php";
-require_once  "config/conexion.php";
+require_once "modelos/modelo_pais.php";
+
 
 $nombrePagina = "País";
 
@@ -12,6 +13,10 @@ if (isset($_GET['paisNombre'])){
     echo "Se van ha guardar los datos....";
 }
 
+
+$paises = obtenerPaises($conexion);
+
+//imprimirArray($paises);
 
 // Incluir la vista
 

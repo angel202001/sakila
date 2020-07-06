@@ -54,9 +54,9 @@
 
 
                         <div class="mb-3">
-                            <label for="lenguajePelicula">Lenguaje de la pelicula</label>
+                            <label for="lenguajePelicula">Idioma de la pelicula</label>
                             <select name="lenguajePelicula" id="lenguajePelicula" class="form-select">
-                                <option value="">Aqui va el listado de la pelicula, desde SQL</option>
+                                <option value="">Seleccione un idioma</option>
 
                             </select>
 

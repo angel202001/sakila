@@ -53,6 +53,49 @@
 
             </div>
 
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">
+
+
+                    <table class="table">
+                        <thead>
+
+                        <th scope="col">ID</th>
+                        <th scope="col">Idiomas</th>
+
+
+                        </thead>
+
+                        <tbody>
+
+
+                        <?php
+
+                        foreach ($idiomas as $idioma) {
+                            echo " <tr>
+
+                                <th scope=\"row\">{$idioma['language_id']}</th>
+                                <td>{$idioma['name']}</td>
+                                
+
+                            </tr>";
+
+                        }
+
+
+
+                        ?>
+
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
 
         </div>
 

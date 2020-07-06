@@ -13,7 +13,9 @@ require_once "modelos/modelo_actor.php";
 
 $actores = obtenerActores($conexion);
 
-imprimirArray($actores);
+//imprimirArray($actores);
+
+
 
 // Aseguremonos de que el usuario haya hecho click en el boton
 if (isset($_GET['guardarPrincipal'])){

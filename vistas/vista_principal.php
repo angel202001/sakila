@@ -24,7 +24,7 @@
 
         </div>
 
-        <div class="col-md-7">
+        <div class="col-md-10">
             <h3><?php echo $nombrePagina; ?></h3>
 
 

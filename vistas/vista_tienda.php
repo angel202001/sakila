@@ -66,8 +66,54 @@
 
             </div>
 
+            <hr>
 
-        </div>
+            <div class="row">
+                <div class="col-md-12">
+
+
+                    <table class="table">
+                        <thead>
+
+                        <th scope="col">ID de la tienda</th>
+                        <th scope="col">Gerente de la tienda</th>
+                        <th scope="col">Dirección de la tienda</th>
+
+
+                        </thead>
+
+                        <tbody>
+
+
+                        <?php
+
+                        foreach ($informacionTiendas as $infoTienda) {
+                            echo " <tr>
+
+                                <th scope=\"row\">{$infoTienda['store_id']}</th>
+                                <td>{$infoTienda['first_name']}</td>
+                                <td>{$infoTienda['address']}</td>
+                                
+
+                            </tr>";
+
+                        }
+
+
+
+                        ?>
+
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+
+            </div>
 
 
 </body>

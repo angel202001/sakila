@@ -1,9 +1,9 @@
 <?php
 
 require_once "funciones/ayudante.php";
-require_once  "config/conexion.php";
+require_once "modelos/modelo_actor.php";
 
-imprimirArray($_GET);
+//imprimirArray($_GET);
 
 $nombrePagina = "Actor";
 
@@ -19,6 +19,11 @@ $apellidoActor = $_GET['apellidoActor']?? "";
 
         echo "Se van ha guardar los datos....";
     }
+
+$actores = obtenerActores($conexion);
+
+    //imprimirArray($actores);
+
 
 
 // Incluir la vista

@@ -32,6 +32,14 @@
                 <div class="col-md-5">
                     <form action="cliente.php" nethod="get">
 
+
+                        <div class="mb-3">
+                            <label for="tiendaCliente"> Tinda</label>
+                            <select name="tiendaCliente" id="tiendaCliente" class="form-select">
+                                <option value="">Selecciona el número de una  tienda</option>
+                            </select>
+                        </div>
+
                         <div class="mb-3">
                             <label for="nombreCliente">Nombre</label>
                             <input type="text" name="nombreCliente" id="nombreCliente" class="form-control">
@@ -52,6 +60,14 @@
                                    placeholder="Email">
 
                         </div>
+
+                        <div class="mb-3">
+                            <label for="direccionCliente"> Dirección</label>
+                            <select name="direccionCliente" id="direccionCliente" class="form-select">
+                                <option value="">Selecciona una dirección</option>
+                            </select>
+                        </div>
+
 
 
                         <div class="mb-3">
