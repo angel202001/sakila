@@ -1,8 +1,13 @@
 <?php
 
-require_once "funciones/ayudante.php";
-require_once  "config/conexion.php";
+//  Incluir modelos
 
+require_once "funciones/ayudante.php";
+require_once  "modelos/modelo_pelicula.php";
+require_once  "modelos/modelo_idioma.php";
+
+$idiomas = obtenerIdiomas($conexion);
+$peliculas = obtenerPeliculas($conexion);
 $nombrePagina = "Película";
 
 // Aseguremonos de que el usuario haya hecho click en el boton

@@ -35,7 +35,17 @@
                         <div class="mb-3">
                             <label for="nombreTienda">Gerente de la tienda</label>
                             <select name="nombreTienda" id="nombreTienda" class="form-select">
-                                <option value="">Aqui va el gerente , desde SQL</option>
+                                <option value="">Seleccione al gerente</option>
+
+                                <?php
+                                foreach ($personal as  $persona) {
+
+                                    echo " <option value=\"{$persona["last_name"]}\">{$persona["first_name"]}</option>";
+
+                                }
+
+                                ?>
+
 
                             </select>
 
@@ -46,7 +56,18 @@
                         <div class="mb-3">
                             <label for="direccionTienda">Direccion de la tienda</label>
                             <select name="direccionTienda" id="direccionTienda" class="form-select">
-                                <option value="">Aqui va la direccion , desde SQL</option>
+                                <option value="">Seleccione la direccion</option>
+
+
+
+                                <?php
+                                foreach ($direcciones as  $direccion) {
+
+                                    echo " <option value=\"{$direccion["address_id"]}\">{$direccion["address"]}</option>";
+
+                                }
+
+                                ?>
 
                             </select>
 

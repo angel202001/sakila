@@ -58,6 +58,15 @@
                             <select name="lenguajePelicula" id="lenguajePelicula" class="form-select">
                                 <option value="">Seleccione un idioma</option>
 
+                                <?php
+                                foreach ($idiomas as $idioma) {
+
+                                    echo " <option value=\"{$idioma["lenguage_id"]}\">{$idioma["name"]}</option>";
+
+                                }
+
+                                ?>
+
                             </select>
 
                         </div>
@@ -95,6 +104,56 @@
 
 
             </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">
+
+
+                    <table class="table">
+                        <thead>
+
+                        <th scope="col">Titulos</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Lanzamiento</th>
+                        <th scope="col">Idioma</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Especiales</th>
+
+
+                        </thead>
+
+                        <tbody>
+
+
+                        <?php
+
+                        foreach ($peliculas as $film) {
+                            echo " <tr>
+
+                                <th scope=\"row\">{$film['title']}</th>
+                                <td>{$film['description']}</td>                             
+                                 <td>{$film['release_year']}</td>
+                                 <td>{$film['language_id']}</td>
+                                  <td>{$film['rental_rate']}</td>
+                                  <td>{$film['special_features']}</td>
+
+                            </tr>";
+
+                        }
+
+
+
+                        ?>
+
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
 
 
         </div>

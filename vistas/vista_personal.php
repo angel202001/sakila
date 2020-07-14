@@ -50,7 +50,16 @@
                         <div class="mb-3">
                             <label for="direccionPersonal">Direccion</label>
                             <select name="direccionPersonal" id="direccionPersonal" class="form-select">
-                                <option value="">Aqui va el listado de direccion del personal, desde SQL</option>
+                                <option value="">Elige una direccion</option>
+
+                                <?php
+                                foreach ($direcciones as $direccion) {
+
+                                    echo " <option value=\"{$direccion["address_id"]}\">{$direccion["address"]}</option>";
+
+                                }
+
+                                ?>
 
                             </select>
 
@@ -75,7 +84,16 @@
                         <div class="mb-3">
                             <label for="tiendaPersonal">Tiendas</label>
                             <select name="tiendaPersonal" id="tiendaPersonal" class="form-select">
-                                <option value="">Aqui va el listado de la tienda, desde SQL</option>
+                                <option value="">Elige  una tienda</option>
+
+                                <?php
+                                foreach ($informacionTiendas as $tienda) {
+
+                                    echo " <option value=\"{$tienda["store_id"]}\">{$tienda["address_id"]}</option>";
+
+                                }
+
+                                ?>
 
                             </select>
 
@@ -100,6 +118,57 @@
 
 
             </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">
+
+
+                    <table class="table">
+                        <thead>
+
+
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">usuario</th>
+                        <th scope="col">Direccción</th>
+
+
+
+
+                        </thead>
+
+                        <tbody>
+
+
+                        <?php
+
+                        foreach ($personal as $staff) {
+                            echo " <tr>
+
+                                <th scope=\"row\">{$staff['first_name']}</th>
+                                <td>{$staff['last_name']}</td>                              
+                                 <td>{$staff['username']}</td>
+                                  <td>{$staff['address']}</td>
+                                 
+                                
+
+                            </tr>";
+
+                        }
+
+
+
+                        ?>
+
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
 
 
         </div>

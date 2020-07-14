@@ -82,11 +82,6 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="ubicacion">Ubicacion</label>
-                            <input type="text" name="ubicacion" id="ubicacion" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
                             <button type="submit" name="guardarDireccion" class="btn btn-primary">Guardar datos</button>
                         </div>
                     </form>
@@ -95,6 +90,54 @@
 
 
             </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">
+
+
+                    <table class="table">
+                        <thead>
+
+                        <th scope="col">Direccion</th>
+                        <th scope="col">Distrito</th>
+                        <th scope="col">ciudad</th>
+                        <th scope="col">Codigo postal</th>
+                        <th scope="col">Telefono</th>
+
+
+                        </thead>
+
+                        <tbody>
+
+
+                        <?php
+
+                        foreach ($direcciones as $address) {
+                            echo " <tr>
+
+                                <th scope=\"row\">{$address['address']}</th>                              
+                                <td>{$address['district']}</td>
+                                <td>{$address['city']}</td>                               
+                                <td>{$address['postal_code']}</td>
+                                <td>{$address['phone']}</td>
+
+                            </tr>";
+
+                        }
+
+
+
+                        ?>
+
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
 
 
         </div>

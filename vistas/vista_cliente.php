@@ -37,6 +37,15 @@
                             <label for="tiendaCliente"> Tinda</label>
                             <select name="tiendaCliente" id="tiendaCliente" class="form-select">
                                 <option value="">Selecciona el número de una  tienda</option>
+
+                                <?php
+                                foreach ($informacionTiendas as $tienda) {
+
+                                    echo " <option value=\"{$tienda["store_id"]}\">{$tienda["address_id"]}</option>";
+
+                                }
+
+                                ?>
                             </select>
                         </div>
 
@@ -65,6 +74,16 @@
                             <label for="direccionCliente"> Dirección</label>
                             <select name="direccionCliente" id="direccionCliente" class="form-select">
                                 <option value="">Selecciona una dirección</option>
+
+                                <?php
+                                foreach ($direcciones as $direccion) {
+
+                                    echo " <option value=\"{$direccion["address_id"]}\">{$direccion["address"]}</option>";
+
+                                }
+
+                                ?>
+
                             </select>
                         </div>
 
@@ -83,6 +102,53 @@
 
 
             </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">
+
+
+                    <table class="table">
+                        <thead>
+
+
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Dirección</th>
+
+
+                        </thead>
+
+                        <tbody>
+
+
+                        <?php
+
+                        foreach ($clientes as $customer) {
+                            echo " <tr>
+
+                               
+                                <td>{$customer['first_name']}</td>
+                                <td>{$customer['last_name']}</td>                               
+                                <td>{$customer['address']}</td>
+                                
+
+                            </tr>";
+
+                        }
+
+
+
+                        ?>
+
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
 
 
         </div>

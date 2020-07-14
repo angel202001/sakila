@@ -7,8 +7,12 @@ $nombrePagina = "Tienda";
 
 
 // Incluir modelos
-
+require_once "modelos/modelo_direccion.php";
 require_once "modelos/modelo_tienda.php";
+require_once  "modelos/modelo_personal.php";
+
+$personal = obtenerPersonal($conexion);
+$direcciones = obtenerDirecciones($conexion);
 $informacionTiendas = obtenerInformacionTienda($conexion);
 
 

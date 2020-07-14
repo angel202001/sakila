@@ -1,13 +1,14 @@
 <?php
 
 require_once "funciones/ayudante.php";
-require_once  "config/conexion.php";
+require_once  "modelos/modelo_direccion.php";
 
 // Incluir los modelos
 
 require_once "modelos/modelo_ciudad.php";
 
 $ciudades = obtenerCiudades($conexion);
+$direcciones = obtenerDirecciones($conexion);
 
 //imprimirArray($ciudades);
 

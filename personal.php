@@ -1,8 +1,17 @@
 <?php
 
-require_once "funciones/ayudante.php";
-require_once  "config/conexion.php";
 
+// Incluir personal
+
+require_once "funciones/ayudante.php";
+require_once  "modelos/modelo_personal.php";
+require_once  "modelos/modelo_direccion.php";
+require_once  "modelos/modelo_tienda.php";
+
+
+$inforamacionTiendas = obtenerInformacionTienda($conexion);
+$direcciones = obtenerDirecciones($conexion);
+$personal = obtenerPersonal($conexion);
 $nombrePagina = "Personal";
 
 // Aseguremonos de que el usuario haya hecho click en el boton
