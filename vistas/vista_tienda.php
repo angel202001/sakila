@@ -38,7 +38,7 @@
                                 <option value="">Seleccione al gerente</option>
 
                                 <?php
-                                foreach ($personal as  $persona) {
+                                foreach ($personal as $persona) {
 
                                     echo " <option value=\"{$persona["last_name"]}\">{$persona["first_name"]}</option>";
 
@@ -59,9 +59,8 @@
                                 <option value="">Seleccione la direccion</option>
 
 
-
                                 <?php
-                                foreach ($direcciones as  $direccion) {
+                                foreach ($direcciones as $direccion) {
 
                                     echo " <option value=\"{$direccion["address_id"]}\">{$direccion["address"]}</option>";
 
@@ -121,9 +120,7 @@
                         }
 
 
-
                         ?>
-
 
 
                         </tbody>
@@ -131,7 +128,6 @@
                     </table>
 
                 </div>
-
 
 
             </div>

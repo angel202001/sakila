@@ -1,8 +1,9 @@
 <?php
 
-require_once  "config/conexion.php";
+require_once "config/conexion.php";
 
-function obtenerCategorias($conexion){
+function obtenerCategorias($conexion)
+{
 
     $sql = "SELECT * FROM category";
 

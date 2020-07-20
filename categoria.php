@@ -6,9 +6,6 @@ require_once "modelos/modelo_categoria.php";
 $nombrePagina = "Categoria";
 
 
-
-
-
 // Aseguremonos de que el usuario haya hecho click en el boton
 if (isset($_GET['categoria'])) {
 

@@ -35,7 +35,7 @@
                         <div class="mb-3">
                             <label for="numeroCity"> Ciudad</label>
                             <select name="numeroCity" id="numeroCity" class="form-select">
-                                <option value="">seleccione  la ciudad</option>
+                                <option value="">seleccione la ciudad</option>
 
                                 <?php
                                 foreach ($ciudades as $ciudad) {
@@ -66,7 +66,6 @@
 
                             </select>
                         </div>
-
 
 
                         <div class="mb-3">
@@ -115,9 +114,7 @@
                         }
 
 
-
                         ?>
-
 
 
                         </tbody>
@@ -127,7 +124,7 @@
                 </div>
 
 
-        </div>
+            </div>
 
 
 </body>

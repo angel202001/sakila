@@ -28,7 +28,6 @@
             <h3><?php echo $nombrePagina; ?></h3>
 
 
-
             <div class="row">
                 <div class="col-md-5">
                     <form action="categoria.php" nethod="get">
@@ -36,7 +35,8 @@
 
                         <div class="mb-3">
                             <label for="categoriaNombre">Nombre</label>
-                            <input type="text" name="categoriaNombre" id="categoriaNombre" class="form-control" placeholder="Digite la categoria">
+                            <input type="text" name="categoriaNombre" id="categoriaNombre" class="form-control"
+                                   placeholder="Digite la categoria">
 
                         </div>
 
@@ -88,9 +88,7 @@
                         }
 
 
-
                         ?>
-
 
 
                         </tbody>
@@ -100,7 +98,7 @@
                 </div>
 
 
-        </div>
+            </div>
 
 
 </body>

@@ -1,7 +1,6 @@
 <?php include_once "partes/parte_head.php"; ?>
 
 
-
 <body>
 
 <!-- Barra superior -->
@@ -75,16 +74,16 @@
 
                         <div class="mb-3">
                             <label for="correoPersonal">Escriba su correo</label>
-                            <input type="text" name="correoPersonal" id="pinturaPersonal" class="form-control" placeholder="Email">
+                            <input type="text" name="correoPersonal" id="pinturaPersonal" class="form-control"
+                                   placeholder="Email">
 
                         </div>
-
 
 
                         <div class="mb-3">
                             <label for="tiendaPersonal">Tiendas</label>
                             <select name="tiendaPersonal" id="tiendaPersonal" class="form-select">
-                                <option value="">Elige  una tienda</option>
+                                <option value="">Elige una tienda</option>
 
                                 <?php
                                 foreach ($informacionTiendas as $tienda) {
@@ -135,8 +134,6 @@
                         <th scope="col">Direccción</th>
 
 
-
-
                         </thead>
 
                         <tbody>
@@ -159,9 +156,7 @@
                         }
 
 
-
                         ?>
-
 
 
                         </tbody>
@@ -171,7 +166,7 @@
                 </div>
 
 
-        </div>
+            </div>
 
 
 </body>

@@ -8,7 +8,7 @@ $nombrePagina = "País";
 
 
 // Aseguremonos de que el usuario haya hecho click en el boton
-if (isset($_GET['paisNombre'])){
+if (isset($_GET['paisNombre'])) {
 
     echo "Se van ha guardar los datos....";
 }

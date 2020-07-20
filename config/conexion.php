@@ -11,7 +11,7 @@ $contrasena = "angelmiguel07";
 // Valores de la base de datos 000wedhost
 
 
-if ($_SERVER['SERVER_NAME'] == 'brillantmind.000webhostapp.com')  {
+if ($_SERVER['SERVER_NAME'] == 'brillantmind.000webhostapp.com') {
     $host = "localhost";
     $dbname = "id12550821_sakila";
     $usuario = "id12550821_angel";
@@ -21,8 +21,8 @@ if ($_SERVER['SERVER_NAME'] == 'brillantmind.000webhostapp.com')  {
 
 $ajustes = [
 
-    19 => 2 // devuelve un array con los nombres de la columna de los resultados de la BD
-
+    19 => 2, // Devuelve un array con los nombres de la columna de los resultados de la BD
+    3  => 2 // Nos genera excepciones cuando hay errores en los queries
 ];
 
 

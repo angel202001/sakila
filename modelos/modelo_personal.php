@@ -1,8 +1,9 @@
 <?php
 
-require_once  "config/conexion.php";
+require_once "config/conexion.php";
 
-function obtenerPersonal($conexion){
+function obtenerPersonal($conexion)
+{
 
     $sql = "SELECT  sta.first_name, sta.last_name, sta.username, a.address 
             FROM staff AS sta

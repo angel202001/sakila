@@ -2,7 +2,8 @@
 
 require_once "config/conexion.php";
 
-function obtenerCiudades($conexion) {
+function obtenerCiudades($conexion)
+{
 
     $sql = "SElECT ci.city_id, ci.city, co.country
             FROM city AS ci

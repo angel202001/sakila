@@ -1,8 +1,9 @@
 <?php
 
-require_once  "config/conexion.php";
+require_once "config/conexion.php";
 
-function obtenerTiendas($conexion){
+function obtenerTiendas($conexion)
+{
 
     $sql = "SELECT store_id FROM store";
 
@@ -10,7 +11,8 @@ function obtenerTiendas($conexion){
 
 }
 
-function obtenerInformacionTienda($conexion){
+function obtenerInformacionTienda($conexion)
+{
 
 
     $sql = "select sto.store_id, sto.manager_staff_id, sto.address_id, sta.first_name, a.address
@@ -18,6 +20,6 @@ function obtenerInformacionTienda($conexion){
             inner join staff as sta on sto.manager_staff_id = sta.staff_id
             inner join address as a on sto.address_id = a.address_id";
 
-        return $conexion->query($sql)->fetchAll();
+    return $conexion->query($sql)->fetchAll();
 
 }

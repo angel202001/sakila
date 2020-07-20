@@ -36,7 +36,7 @@
                         <div class="mb-3">
                             <label for="tiendaCliente"> Tinda</label>
                             <select name="tiendaCliente" id="tiendaCliente" class="form-select">
-                                <option value="">Selecciona el número de una  tienda</option>
+                                <option value="">Selecciona el número de una tienda</option>
 
                                 <?php
                                 foreach ($informacionTiendas as $tienda) {
@@ -86,7 +86,6 @@
 
                             </select>
                         </div>
-
 
 
                         <div class="mb-3">
@@ -139,9 +138,7 @@
                         }
 
 
-
                         ?>
-
 
 
                         </tbody>
@@ -151,7 +148,7 @@
                 </div>
 
 
-        </div>
+            </div>
 
 
 </body>

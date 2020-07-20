@@ -1,10 +1,9 @@
 <?php
 
-require_once  "funciones/ayudante.php";
-require_once  "config/conexion.php";
+require_once "funciones/ayudante.php";
+require_once "config/conexion.php";
 
 $nombrePagina = "Principal";
-
 
 
 // Incluir los modelos
@@ -16,13 +15,11 @@ $actores = obtenerActores($conexion);
 //imprimirArray($actores);
 
 
-
 // Aseguremonos de que el usuario haya hecho click en el boton
-if (isset($_GET['guardarPrincipal'])){
+if (isset($_GET['guardarPrincipal'])) {
 
     echo "Se van ha guardar los datos....";
 }
-
 
 
 // Incluir la vista

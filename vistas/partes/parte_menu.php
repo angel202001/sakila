@@ -17,12 +17,12 @@
 
 
     ];
-    $url =$_SERVER['REQUEST_URI'];
+    $url = $_SERVER['REQUEST_URI'];
     foreach ($paginasMenu as $nombreArchivo => $pagina) {
         $paginaActual = '';
-        if(strpos($url,$nombreArchivo)){
+        if (strpos($url, $nombreArchivo)) {
 
-           $paginaActual = 'activo';
+            $paginaActual = 'activo';
         }
         $icono = $pagina[1];
         $textoPagina = $pagina[0];

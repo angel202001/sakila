@@ -5,14 +5,14 @@ require_once "funciones/ayudante.php";
 
 // Incluir los modelos
 
-require_once  "modelos/modelo_ciudad.php";
-require_once  "modelos/modelo_pais.php";
+require_once "modelos/modelo_ciudad.php";
+require_once "modelos/modelo_pais.php";
 
 $nombrePagina = "Ciudad";
 
 
 // Aseguremonos de que el usuario haya hecho click en el boton
-if (isset($_GET['numeroCiudad'])){
+if (isset($_GET['numeroCiudad'])) {
 
     echo "Se van ha guardar los datos....";
 }

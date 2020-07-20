@@ -1,18 +1,18 @@
-
 <?php
 
 
 // Definir la funcion para el manejo de errores
 
 
-function reportarErrores($numero, $mensaje, $archivo, $linea) {
-$codigos = [
-1 => "Error fatal",
-2 => "Advertencia",
-8 => "Aviso",
-];
+function reportarErrores($numero, $mensaje, $archivo, $linea)
+{
+    $codigos = [
+        1 => "Error fatal",
+        2 => "Advertencia",
+        8 => "Aviso",
+    ];
 
-echo "<div class=\"alert alert-warning\" role=\"alert\">
+    echo "<div class=\"alert alert-warning\" role=\"alert\">
 <h4 class=\"alert-heading\">{$codigos[$numero]}</h4>
 <p>{$mensaje}</p>
 <hr>
@@ -23,10 +23,11 @@ echo "<div class=\"alert alert-warning\" role=\"alert\">
 
 set_error_handler('reportarErrores');
 
-function reportarExcepciones($exception) {
-echo "<link rel=\"stylesheet\" href=\"static/css/bootstrap.min.css\">";
+function reportarExcepciones($exception)
+{
+    echo "<link rel=\"stylesheet\" href=\"static/css/bootstrap.min.css\">";
 
-echo "<div class=\"alert alert-danger\" role=\"alert\">
+    echo "<div class=\"alert alert-danger\" role=\"alert\">
 <h4 class=\"alert-heading\">Ha ocurrido una excepción</h4>
 <p>{$exception->getMessage()}</p>
 <hr>
@@ -37,9 +38,8 @@ echo "<div class=\"alert alert-danger\" role=\"alert\">
 set_exception_handler('reportarExcepciones');
 
 
-
-
-function imprimirArray($array) {
+function imprimirArray($array)
+{
     echo "<pre>";
     print_r($array);
     echo "</pre>";

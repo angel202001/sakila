@@ -1,8 +1,9 @@
 <?php
 
-require_once  "config/conexion.php";
+require_once "config/conexion.php";
 
-function obtenerIdiomas($conexion){
+function obtenerIdiomas($conexion)
+{
 
     $sql = "SELECT * FROM language";
 
