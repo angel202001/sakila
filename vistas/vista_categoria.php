@@ -30,12 +30,12 @@
 
             <div class="row">
                 <div class="col-md-5">
-                    <form action="categoria.php" nethod="get">
+                    <form action="categoria.php" method="post">
 
 
                         <div class="mb-3">
-                            <label for="categoriaNombre">Nombre</label>
-                            <input type="text" name="categoriaNombre" id="categoriaNombre" class="form-control"
+                            <label for="nombreCategoria">Nombre</label>
+                            <input type="text" name="nombreCategoria" id="nombreCategoria" class="form-control"
                                    placeholder="Digite la categoria">
 
                         </div>
@@ -43,11 +43,27 @@
 
                         <div class="mb-3">
 
-                            <button type="submit" name="categoria" class="btn btn-primary">Guardar datos</button>
+                            <button type="submit" name="guardar_categoria" class="btn btn-primary">Guardar datos
+                            </button>
 
                         </div>
 
                     </form>
+
+
+                    <?php
+
+                    if ( isset($error) ) {
+                        echo $error;
+                    }
+
+
+                    if ( isset($categoriaInsertada) ) {
+
+                        echo "Los datos se han insertado.";
+                    }
+
+                    ?>
 
 
                 </div>
@@ -101,5 +117,3 @@
             </div>
 
 
-</body>
-</html>
