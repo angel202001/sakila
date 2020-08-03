@@ -30,18 +30,18 @@
 
             <div class="row">
                 <div class="col-md-5">
-                    <form action="pais.php" nethod="get">
+                    <form action="pais.php" method="post">
 
                         <div class="mb-3">
                             <label for="nombre">Escriba su país</label>
-                            <input type="text" name="nombre" id="nombre" class="form-control">
+                            <input type="text" name="nombrePais" id="nombrePais" class="form-control">
 
                         </div>
 
 
                         <div class="mb-3">
 
-                            <button type="submit" name="paisNombre" class="btn btn-primary">Guardar datos</button>
+                            <button type="submit" name="guardar_pais" class="btn btn-primary">Guardar datos</button>
 
                         </div>
 
@@ -62,7 +62,7 @@
                         <thead>
 
                         <th scope="col">ID</th>
-                        <th scope="col">Ciudad</th>
+                        <th scope="col">Pais</th>
 
 
                         </thead>

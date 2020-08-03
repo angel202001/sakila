@@ -22,7 +22,7 @@ if ($_SERVER['SERVER_NAME'] == 'brillantmind.000webhostapp.com') {
 $ajustes = [
 
     19 => 2, // Devuelve un array con los nombres de la columna de los resultados de la BD
-    3  => 2 // Nos genera excepciones cuando hay errores en los queries
+    3 => 2 // Nos genera excepciones cuando hay errores en los queries
 ];
 
 

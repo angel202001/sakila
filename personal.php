@@ -15,7 +15,7 @@ $personal = obtenerPersonal($conexion);
 $nombrePagina = "Personal";
 
 // Aseguremonos de que el usuario haya hecho click en el boton
-if (isset($_GET['guardarPersonal'])) {
+if ( isset($_POST['guardarPersonal']) ) {
 
     echo "Se van ha guardar los datos....";
 }

@@ -1,3 +1,4 @@
+
 <?php include_once "partes/parte_head.php"; ?>
 
 
@@ -89,6 +90,19 @@
 
 
                         <div class="mb-3">
+                            <label for="activoCliente">active</label>
+                            <input type="text" name="activoCliente" id="activoCliente" class="form-control">
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="creacionCliente">Fecha de creacion</label>
+                            <input type="text" name="creacionCliente" id="creacionCliente" class="form-control">
+
+                        </div>
+
+
+                        <div class="mb-3">
 
                             <button type="submit" name="guardarCliente" class="btn btn-primary">Guardar datos</button>
 
@@ -111,10 +125,14 @@
                     <table class="table">
                         <thead>
 
-
+                        <th scope="col">ID</th>
+                        <th scope="col">Tienda</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Apellido</th>
+                        <th scope="col">Email</th>
                         <th scope="col">Dirección</th>
+                        <th scope="col">Activo</th>
+                        <th scope="col">Fecha de creacion</th>
 
 
                         </thead>
@@ -126,13 +144,17 @@
 
                         foreach ($clientes as $customer) {
                             echo " <tr>
-
                                
-                                <td>{$customer['first_name']}</td>
-                                <td>{$customer['last_name']}</td>                               
-                                <td>{$customer['address']}</td>
+                               <td>{$customer['customer_id']}</td>
+                                <td>{$customer['store_id']}</td>
+                                <td>{$customer['first_name']}</td>                               
+                                <td>{$customer['last_name']}</td>
+                                <td>{$customer['email']}</td>
+                                <td>{$customer['address']}</td>                               
+                                <td>{$customer['active']}</td>
+                                 <td>{$customer['create_date']}</td>
                                 
-
+                                
                             </tr>";
 
                         }

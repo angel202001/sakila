@@ -29,30 +29,19 @@
 
             <div class="row">
                 <div class="col-md-5">
-                    <form action="ciudad.php" nethod="get">
+                    <form action="ciudad.php" method="post">
 
 
                         <div class="mb-3">
-                            <label for="numeroCity"> Ciudad</label>
-                            <select name="numeroCity" id="numeroCity" class="form-select">
-                                <option value="">seleccione la ciudad</option>
+                            <label for="nombreCiudad"> Ciudad</label>
+                            <input type="text" name="nombreCiudad" id="nombreCiudad" class="form-control">
 
-                                <?php
-                                foreach ($ciudades as $ciudad) {
-
-                                    echo " <option value=\"{$ciudad["city_id"]}\">{$ciudad["city"]}</option>";
-
-                                }
-
-                                ?>
-
-                            </select>
                         </div>
 
 
                         <div class="mb-3">
-                            <label for="selectorCiudad"> País</label>
-                            <select name="selectorCiudad" id="selectorCiudad" class="form-select">
+                            <label for="pais"> País</label>
+                            <select name="pais" id="pais" class="form-select">
                                 <option value="">seleccione un pais</option>
 
                                 <?php
@@ -70,11 +59,25 @@
 
                         <div class="mb-3">
 
-                            <button type="submit" name="numeroCiudad" class="btn btn-primary">Guardar datos</button>
+                            <button type="submit" name="guardar_ciudad" class="btn btn-primary">Guardar datos</button>
 
                         </div>
 
                     </form>
+
+                    <?php
+
+                    if ( isset($error) ) {
+                        echo $error;
+                    }
+
+
+                    if ( isset($ciudadInsertada) ) {
+
+                        echo "Los datos se han insertado.";
+                    }
+
+                    ?>
 
                 </div>
 

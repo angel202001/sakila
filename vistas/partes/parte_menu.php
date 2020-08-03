@@ -3,17 +3,17 @@
     <?php
 
     $paginasMenu = [
-        "index"     => ["Inicio", "fas fa-home"],
-        "actor"     => ["Actor", "fas fa-user-tie"],
+        "index" => ["Inicio", "fas fa-home"],
+        "actor" => ["Actor", "fas fa-user-tie"],
         "direccion" => ["Dirección", "fas fa-map-marker-alt"],
-        "ciudad"    => ["Ciudad", "fas fa-city"],
-        "pais"      => ["País", "far fa-flag"],
-        "cliente"   => ["Cliente", "fas fa-hands-helping"],
+        "ciudad" => ["Ciudad", "fas fa-city"],
+        "pais" => ["País", "far fa-flag"],
+        "cliente" => ["Cliente", "fas fa-hands-helping"],
         "categoria" => ["Categoria", "fas fa-tags"],
-        "pelicula"  => ["Película", "fas fa-film"],
-        "idioma"    => ["Idioma", "fas fa-globe-americas"],
-        "personal"  => ["Personal", "fas fa-users"],
-        "tienda"    => ["tienda", "fas fa-store"]
+        "pelicula" => ["Película", "fas fa-film"],
+        "idioma" => ["Idioma", "fas fa-globe-americas"],
+        "personal" => ["Personal", "fas fa-users"],
+        "tienda" => ["tienda", "fas fa-store"]
 
 
     ];

@@ -30,7 +30,7 @@
 
             <div class="row">
                 <div class="col-md-5">
-                    <form action="idioma.php" nethod="get">
+                    <form action="idioma.php" method="post">
 
                         <div class="mb-3">
                             <label for="idioma">Seleccione su idioma</label>

@@ -30,7 +30,7 @@
 
             <div class="row">
                 <div class="col-md-5">
-                    <form action="tienda.php" nethod="get">
+                    <form action="tienda.php" method="post">
 
                         <div class="mb-3">
                             <label for="nombreTienda">Gerente de la tienda</label>

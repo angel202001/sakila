@@ -29,18 +29,19 @@
             <div class="row">
                 <div class="col-md-5">
 
-                    <form action="actor.php" nethod="get">
+                    <form action="actor.php" method="post">
 
                         <div class="mb-3">
                             <label for="nombreActor">Primer nombre del actor</label>
-                            <input type="text" name="nombreActor" id="nombreActor" class="form-control">
+                            <input type="text" name="nombreActor" id="nombreActor" class="form-control"
+                                   value="<?= $nombreActor ?>">
 
                         </div>
 
 
                         <div class="mb-3">
                             <label for="apellidoActor">Apellido del actor</label>
-                            <input type="text" name="apellidoActor" class="form-control">
+                            <input type="text" name="apellidoActor" class="form-control" value="<?= $apellidoActor ?>">
 
                         </div>
 
@@ -51,6 +52,21 @@
                         </div>
 
                     </form>
+
+                    <?php
+
+                    if ( isset($error) ) {
+                        echo $error;
+                    }
+
+
+                    if ( isset($mensaje) ) {
+
+                        echo $mensaje;
+                    }
+
+                    ?>
+
 
                 </div>
             </div>
@@ -105,6 +121,4 @@
 
     </div>
 
-
-</body>
-</html>
+    <?php include_once "partes/parte_food.php"; ?>

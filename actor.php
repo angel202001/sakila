@@ -8,36 +8,52 @@ $nombrePagina = "Actor";
 
 // Declarar las variables
 
-$nombreActor = $_GET['nombreActor'] ?? "";
-$apellidoActor = $_GET['apellidoActor'] ?? "";
+$nombreActor = $_POST['nombreActor'] ?? "";
+$apellidoActor = $_POST['apellidoActor'] ?? "";
 
 
-// Aseguremonos de que el usuario haya hecho click en el boton
-if (isset($_GET['guardar_actor'])) {
+try {
+    if ( isset($_POST['guardar_actor']) ) {
 
-    echo "Se van ha guardar los datos....";
+
+        // Validar los datos
+
+        if ( empty($nombreActor) ) {
+            throw new Exception ("El nombre esta vacio");
+
+        }
+
+        if ( empty($apellidoActor) ) {
+            throw new Exception ("El apellido esta vacio....");
+        }
+
+        // Preparar el array con las datos
+        $datos = compact('nombreActor', 'apellidoActor');
+
+
+        // insertar los datos
+
+        $actorInsertado = insertarActores($conexion, $datos);
+        $mensaje = "Los datos se guardaron correctamente";
+
+        // lanzar un error si no se insertó correctamente
+
+        if ( ! $actorInsertado ) {
+
+            throw new Exception ("Ocurrio un error al escribir los datos");
+        }
+
+        // Redireccion de la pagina
+
+
+        redireccionar("actor.php");
+    }
+} catch ( Exception $e ) {
+    $error = $e->getMessage();
 }
 
 
-imprimirArray($_GET);
-// validar los datos
-// TODO
-
-
-$datos = compact('nombreActor', 'apellidoActor');
-
-
-// insertar los datos
-
-$insertar = insertarActores($conexion, $datos);
-
-if ($insertar) {
-
-
-}
-
-//imprimirArray($actores);
-
+// Cargar los datos de los modelos
 
 $actores = obtenerActores($conexion);
 

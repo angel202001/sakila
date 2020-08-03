@@ -17,7 +17,7 @@ $informacionTiendas = obtenerInformacionTienda($conexion);
 
 
 // Aseguremonos de que el usuario haya hecho click en el boton
-if (isset($_GET['guardarTienda'])) {
+if ( isset($_POST['guardarTienda']) ) {
 
     echo "Se van ha guardar los datos....";
 }

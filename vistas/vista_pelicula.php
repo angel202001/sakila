@@ -30,7 +30,7 @@
 
             <div class="row">
                 <div class="col-md-5">
-                    <form action="pelicula.php" nethod="get">
+                    <form action="pelicula.php" method="post">
 
                         <div class="mb-3">
                             <label for="nombrePelicula">Titulo de la pelicula</label>
@@ -47,8 +47,22 @@
 
 
                         <div class="mb-3">
-                            <label for="lanzamientoPelicula">Lanzamiento de la pelicula</label>
-                            <input type="text" name="lanzamientoPelicula" id="lanzamientoPelicula" class="form-control">
+
+                            <label for="anoLanzamiento" class="form-label">Año de lanzamiento</label>
+                            <input class="form-control" list="listadoAnios" name="anoLanzamiento" id="anoLanzamiento"
+                                   placeholder="Digite un año">
+                            <datalist id="listadoAnios">
+
+
+                                <?php
+                                for ( $year = date("Y"); $year >= 1900; $year-- ) {
+                                    echo "<option value=\"{$year}\">";
+                                }
+
+                                ?>
+
+
+                            </datalist>
 
                         </div>
 
@@ -99,6 +113,20 @@
 
                     </form>
 
+                    <?php
+
+                    if ( isset($error) ) {
+                        echo $error;
+                    }
+
+
+                    if ( isset($peliculasInsertada) ) {
+
+                        echo "Los datos se han insertado.";
+                    }
+
+                    ?>
+
 
                 </div>
 
@@ -117,7 +145,6 @@
                         <th scope="col">Titulos</th>
                         <th scope="col">Descripción</th>
                         <th scope="col">Lanzamiento</th>
-                        <th scope="col">Idioma</th>
                         <th scope="col">Precio</th>
                         <th scope="col">Especiales</th>
 
@@ -134,8 +161,7 @@
 
                                 <th scope=\"row\">{$film['title']}</th>
                                 <td>{$film['description']}</td>                             
-                                 <td>{$film['release_year']}</td>
-                                 <td>{$film['language_id']}</td>
+                                 <td>{$film['release_year']}</td>                                 
                                   <td>{$film['rental_rate']}</td>
                                   <td>{$film['special_features']}</td>
 

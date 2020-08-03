@@ -44,5 +44,11 @@ function imprimirArray($array)
     print_r($array);
     echo "</pre>";
 
+}
+
+function redireccionar($ruta)
+{
+
+    header("location:{$ruta}", true, 303);
 
 }

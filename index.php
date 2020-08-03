@@ -16,7 +16,7 @@ $actores = obtenerActores($conexion);
 
 
 // Aseguremonos de que el usuario haya hecho click en el boton
-if (isset($_GET['guardarPrincipal'])) {
+if ( isset($_POST['guardarPrincipal']) ) {
 
     echo "Se van ha guardar los datos....";
 }

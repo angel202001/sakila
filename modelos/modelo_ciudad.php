@@ -14,3 +14,12 @@ function obtenerCiudades($conexion)
 
 
 }
+
+
+function insertarCiudades($conexion, $datos)
+{
+
+    $sql = "INSERT INTO city(city, country_id) VALUES (:nombreCiudad, :pais)";
+
+    return $conexion->prepare($sql)->execute($datos);
+}

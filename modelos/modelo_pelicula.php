@@ -13,3 +13,10 @@ function obtenerPeliculas($conexion)
 
 }
 
+function insertarPeliculas($conexion, $datos)
+{
+
+    $sql = "INSERT INTO film(title, description, release_year, rental_rate,  special_features) VALUES (:nombrePelicula, :descripcionPelicula, :lanzamientoPelicula, :precioPelicula,  :especialesPelicula)";
+
+    return $conexion->prepare($sql)->execute($datos);
+}

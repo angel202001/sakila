@@ -30,7 +30,7 @@
 
             <div class="row">
                 <div class="col-md-5">
-                    <form action="direccion.php" nethod="get">
+                    <form action="direccion.php" method="post">
 
                         <div class="mb-3">
                             <label for="direccion">Direccion</label>
@@ -38,12 +38,6 @@
 
                         </div>
 
-
-                        <div class="mb-3">
-                            <label for="direccion2">Direccion2</label>
-                            <input type="text" name="direccion2" id="direccion2" class="form-control">
-
-                        </div>
 
                         <div class="mb-3">
                             <label for="distrito">Distrito</label>
@@ -81,10 +75,26 @@
 
                         </div>
 
+
                         <div class="mb-3">
-                            <button type="submit" name="guardarDireccion" class="btn btn-primary">Guardar datos</button>
+                            <button type="submit" name="guardar_Direccion" class="btn btn-primary">Guardar datos
+                            </button>
                         </div>
                     </form>
+
+                    <?php
+
+                    if ( isset($error) ) {
+                        echo $error;
+                    }
+
+
+                    if ( isset($direccionInsertada) ) {
+
+                        echo "Los datos se han insertado.";
+                    }
+
+                    ?>
 
                 </div>
 
@@ -122,6 +132,7 @@
                                 <td>{$address['city']}</td>                               
                                 <td>{$address['postal_code']}</td>
                                 <td>{$address['phone']}</td>
+                                 
 
                             </tr>";
 

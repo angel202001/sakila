@@ -12,3 +12,11 @@ function obtenerDirecciones($conexion)
     return $conexion->query($sql)->fetchAll();
 
 }
+
+function insertarDirecciones($conexion, $datos)
+{
+
+    $sql = "INSERT INTO address(address, district, city_id, postal_code, phone) VALUES (:direccion, :distrito, :ciudad, :codigoPostal, :telefono )";
+
+    return $conexion->prepare($sql)->execute($datos);
+}
