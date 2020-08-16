@@ -47,6 +47,21 @@
 
                     </form>
 
+
+                    <?php
+
+                    if ( isset($error) ) {
+                        echo $error;
+                    }
+
+
+                    if ( isset($mensaje) ) {
+
+                        echo $mensaje;
+                    }
+
+                    ?>
+
                 </div>
 
 

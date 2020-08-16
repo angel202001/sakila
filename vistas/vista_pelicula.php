@@ -32,9 +32,10 @@
                 <div class="col-md-5">
                     <form action="pelicula.php" method="post">
 
+
                         <div class="mb-3">
-                            <label for="nombrePelicula">Titulo de la pelicula</label>
-                            <input type="text" name="nombrePelicula" id="nombrePelicula" class="form-control">
+                            <label for="tituloPelicula">Titulo de la pelicula</label>
+                            <input type="text" name="tituloPelicula" id="tituloPelicula" class="form-control">
 
                         </div>
 
@@ -68,8 +69,8 @@
 
 
                         <div class="mb-3">
-                            <label for="lenguajePelicula">Idioma de la pelicula</label>
-                            <select name="lenguajePelicula" id="lenguajePelicula" class="form-select">
+                            <label for="idiomaPelicula">Idioma de la pelicula</label>
+                            <select name="idiomaPelicula" id="idiomaPelicula" class="form-select">
                                 <option value="">Seleccione un idioma</option>
 
                                 <?php
@@ -85,6 +86,12 @@
 
                         </div>
 
+                        <div class="mb-3">
+                            <label for="originalPelicula">Idioma original</label>
+                            <input type="text" name="originalPelicula" id="originalPelicula" class="form-control">
+
+                        </div>
+
 
                         <div class="mb-3">
                             <label for="precioPelicula">Precio de la pelicula</label>
@@ -92,15 +99,17 @@
 
                         </div>
 
+
                         <div class="mb-3">
-                            <label for="codigoPelicula">Codigo postal</label>
-                            <input type="text" name="codigoPelicula" id="codigoPelicula" class="form-control">
+                            <label for="ratingPelicula">Rating</label>
+                            <input type="text" name="ratingPelicula" id="ratingPelicula" class="form-control">
 
                         </div>
 
+
                         <div class="mb-3">
-                            <label for="especialesPelicula">Especiales de peliculas</label>
-                            <input type="text" name="especialesPelicula" id="especialesPelicula" class="form-control">
+                            <label for="especialPelicula">Especiales</label>
+                            <input type="text" name="especialPelicula" id="especialPelicula" class="form-control">
 
                         </div>
 
@@ -142,10 +151,14 @@
                     <table class="table">
                         <thead>
 
+                        <th scope="col">ID</th>
                         <th scope="col">Titulos</th>
                         <th scope="col">Descripción</th>
                         <th scope="col">Lanzamiento</th>
+                        <th scope="col">Idioma</th>
+                        <th scope="col">Idioma original</th>
                         <th scope="col">Precio</th>
+                        <th scope="col">Rating</th>
                         <th scope="col">Especiales</th>
 
 
@@ -159,10 +172,14 @@
                         foreach ($peliculas as $film) {
                             echo " <tr>
 
-                                <th scope=\"row\">{$film['title']}</th>
+                                <th scope=\"row\">{$film['film_id']}</th>
+                                <td>{$film['title']}</td> 
                                 <td>{$film['description']}</td>                             
-                                 <td>{$film['release_year']}</td>                                 
-                                  <td>{$film['rental_rate']}</td>
+                                 <td>{$film['release_year']}</td> 
+                                  <td>{$film['language_id']}</td>
+                                   <td>{$film['original_language_id']}</td>                                                                 
+                                  <td>{$film['rental_rate']}</td>                                 
+                                  <td>{$film['rating']}</td>
                                   <td>{$film['special_features']}</td>
 
                             </tr>";

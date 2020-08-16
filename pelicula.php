@@ -11,11 +11,14 @@ $peliculas = obtenerPeliculas($conexion);
 $nombrePagina = "Película";
 
 
-$nombrePelicula = $_POST['nombrePelicula'] ?? "";
+$tituloPelicula = $_POST['tituloPelicula'] ?? "";
 $descripcionPelicula = $_POST['descripcionPelicula'] ?? "";
-$lanzamientoPelicula = $_POST['lanzamientoPelicula'] ?? "";
+$anoLanzamiento = $_POST['anoLanzamiento'] ?? "";
+$idiomaPelicula = $_POST['idiomaPelicula'] ?? "";
+$originalPelicula = $_POST['originalPelicula'] ?? "";
 $precioPelicula = $_POST['precioPelicula'] ?? "";
-$especialesPelicula = $_POST['especialesPelicula'] ?? "";
+$ratingPelicula = $_POST['ratingPelicula'] ?? "";
+$especialPelicula = $_POST['especialesPelicula'] ?? "";
 
 
 // Aseguremonos de que el usuario haya hecho click en el boton
@@ -25,8 +28,8 @@ try {
 
         // Validar los datos
 
-        if ( empty($nombrePelicula) ) {
-            throw new Exception ("El nombre de la pelicula esta vacio");
+        if ( empty($tituloPelicula) ) {
+            throw new Exception ("El titulo de la pelicula esta vacio");
 
         }
 
@@ -35,7 +38,7 @@ try {
         }
 
 
-        if ( empty($lanzamientoPelicula) ) {
+        if ( empty($anoLanzamiento) ) {
             throw new Exception ("El lanzamiento esta vacio");
 
         }
@@ -44,13 +47,27 @@ try {
             throw new Exception ("El precio esta vacio");
         }
 
+        if ( empty($idiomaPelicula) ) {
+            throw new Exception ("El precio esta vacio");
+        }
+
+        if ( empty($originalPelicula) ) {
+            throw new Exception ("El precio esta vacio");
+        }
+
+        if ( empty($ratingPelicula) ) {
+            throw new Exception ("El rating esta vacio");
+        }
+
+
         if ( empty($especialesPelicula) ) {
             throw new Exception ("El especial esta vacio");
         }
 
 
         // Preparar el array con las datos
-        $datos = compact('nombrePelicula', 'descripcionPelicula', 'lanzamientoPelicula', 'precioPelicula', 'especialesPelicula');
+        $datos = compact('tituloPelicula', 'descripcionPelicula', 'anoLanzamiento', 'idiomaPelicula',
+            'originalPelicula', 'precioPelicula', 'ratingPelicula', 'especialesPelicula');
 
 
         // insertar los datos

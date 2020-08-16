@@ -53,7 +53,7 @@
 
                     </form>
 
-                    <?php
+                   <?php
 
                     if ( isset($error) ) {
                         echo $error;

@@ -16,7 +16,7 @@ $nombrePagina = "Cliente";
 // Aseguremonos de que el usuario haya hecho click en el boton
 // Declarar las variables
 
-$idCliente = $_POST['idCliente'] ?? "";
+
 $tiendaCliente = $_POST['tiendaCliente'] ?? "";
 $nombreCliente = $_POST['nombreCliente'] ?? "";
 $apellidoCliente = $_POST['apellidoCliente'] ?? "";
@@ -31,9 +31,6 @@ try {
 
         // Validar los datos
 
-        if ( empty($idCliente) ) {
-            throw new Exception ("seleccione una tienda");
-        }
 
         if ( empty($tiendaCliente) ) {
             throw new Exception ("seleccione una tienda");
@@ -67,7 +64,7 @@ try {
 
 
         // Preparar el array con las datos
-        $datos = compact('idCliente', 'tiendaCliente', 'nombreCliente',
+        $datos = compact('tiendaCliente', 'nombreCliente',
             'apellidoCliente', 'nombreEmail', 'direccionCliente', 'activoCliente', 'creacionCliente');
 
 

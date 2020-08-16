@@ -49,7 +49,16 @@
                         <div class="mb-3">
                             <label for="nombreCiudad">Ciudad</label>
                             <select name="nombreCiudad" id="nombreCiudad" class="form-select">
-                                <option value="">Aqui va el listado de la ciudad, desde SQL</option>
+                                <option value="">Elige una ciudad</option>
+
+                                <?php
+                                foreach ( $ciudades as $ciudad ) {
+
+                                    echo " <option value=\"{$ciudad["city_id"]}\">{$ciudad["city"]}</option>";
+
+                                }
+
+                                ?>
 
                             </select>
 
@@ -80,6 +89,7 @@
                 </div>
 
             </div>
+
 
         </div>
 
